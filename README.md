@@ -15,7 +15,7 @@ FoodCritic is a simplistic web application designed to assist users in tracking 
     - An "ADD RESTAURANT" button, routing to `/add` via GET, enables users to review a restaurant through a form presented in `add.html`.
     - The form captures various restaurant details with an optional description field, and on submission, routes to `/add` via POST, saving the information to the `restaurants` table in `uniplanner.db`.
 
-3. **Ask Page**:
+3. **Ask Page using OpenAI API**:
     - Accessible via the "Ask" button, this page routes to `/ask` via GET and displays a form from `ask.html`.
     - Utilizing an OpenAI API (with a generated free API key) a `gpt_ask(question)` function in `helpers.py` processes user queries.
     - The function’s output is iteratively displayed on `ask.html`.
