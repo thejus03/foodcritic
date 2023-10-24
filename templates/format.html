@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Foodcritic -{% block title %}{% endblock %}</title>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,900;1,500;1,900&display=swap" rel="stylesheet">
+        <style>
+        
+            header img {
+                width: 50px;
+                margin-right: 10px;
+                
+            }
+            
+            
+        </style>
+    </head>
+    
+    <body id="rest_bg" class="background-tint">
+        <header style="text-align: center;"><img style="margin: auto;" src="/static/Screenshot 2023-09-23 213019.png"><h style="font-size: 30px;">Foodcritic</h></header>
+        <div style="display: inline-block;">
+
+            <form action="/" style="display: inline;" method="GET">
+                <button class="button-54" style="width: fit-content;" type="submit">Home</button>
+            </form>
+
+            <form action="/ask" style="display: inline;" method="GET">
+                <button class="button-54" style="width: fit-content;" type="submit">Ask</button>
+            </form>
+
+            <form action="/search" style="display: inline;" method="GET">
+                <button class="button-54" style= "width: fit-content;" type="submit">Search</button>
+            </form>
+
+            <form action="/logout" style="display: inline;" method="GET">
+                <button class="button-54" style= "width: fit-content;" type="submit">Log Out</button>
+            </form>
+            
+            
+        </div>
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+        <footer style="position: fixed ; bottom:0;text-align: center; color: peachpuff;width: 100%; font-size: small;">
+            <strong>Made by Thejus@CS50</strong>
+        </footer>
+    </body>
+</html>

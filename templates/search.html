@@ -1,0 +1,26 @@
+{% extends "format.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+    <form action="/search", method="POST">
+        <div class="user-box2">
+            <input  style="width: 70%; padding: 10px;text-align: center; margin-left: 10%; " name="question" type="text" autofocus autocomplete="off" placeholder="Search for name or cusine of restaurant you visited">
+            <button style="text-align:left; padding: 10px" type="submit" class="button-54">Ask</button>
+        </div>
+    </form>
+    {% for restaurant in reply_info %}
+        <div class="module">
+                    
+            <h2 style="text-align: center;">{{ restaurant["restaurant_name"] }} {{ restaurant["rating"]}}/5 stars </button></h2>
+                <h4 style="text-align: center;"><i>{{ restaurant["cusine"] }}</i></h4>
+                <p>{{ restaurant["description"] }}</p>
+            <form action="/delete", method="POST">
+                <button type="submit">Delete</button>
+                <input type="text" name='restaurant_name' value='{{ restaurant["restaurant_name"] }}' hidden>
+            </form>
+            
+        </div>
+    {% endfor %}
+
+{% endblock %}

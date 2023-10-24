@@ -1,0 +1,22 @@
+{% extends "format.html" %}
+
+{% block title %}Add restaurant{% endblock %}
+
+{% block body %}
+    <div id= "display" class="contact-us">
+        <div style="color: rgb(197, 81, 81);"><strong>{{ notice }}</strong></div>
+        <form action="/add" method="POST">
+            <input class="input" id = "input_restaurant" name="input-restaurant" autocomplete="off" autofocus placeholder="Name of restaurant" required>
+
+            <input class="input" id = "input_cusine" name="input-cusine" autocomplete="off" placeholder="Cusine" required>
+                
+            <input class= "input" id = "input_rating" name="input-rating" autocomplete="off" placeholder = "Rating (out of 5)" required>
+
+            <input  class = "input" id = "input_description" name="input-description" autocomplete="off" placeholder = "Brief description(optional)" >
+            <button type="submit" class="button">Submit</button>
+        </form>
+
+    </div>
+    
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "format.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+    <form action="/ask", method="POST">
+        <div class="user-box2">
+            <input  style="width: 70%; padding: 10px;text-align: center; margin-left: 10%; " name="question" type="text" autofocus autocomplete="off" placeholder="Ask about restaurants in Singapore">
+            <button style="text-align:left; padding: 10px" type="submit" class="button-54">Ask</button>
+        </div>
+    </form>
+    <br><br>
+    
+        {% for answer in answer_list %}
+        <div class="module2">
+            <p>{{ answer.text }}</p>
+        </div>
+        {% endfor %}
+    
+    
+{% endblock %}

@@ -1,0 +1,376 @@
+#login_bg, #register_bg, #rest_bg {
+    background-image: url("lily-banse--YHSwy6uqvk-unsplash.jpg");
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    margin: 10px;
+    padding: 10px;
+
+    
+}
+.module {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #6d6767;
+  opacity: 0.8;
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.module2 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #6d6767;
+  opacity: 0.8;
+  width: 60%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+}
+.centered {
+  display: inline;
+}
+
+.background-tint {
+  background-color: grey;
+  background-blend-mode: multiply;
+  
+}
+.h1 {
+  font-size: 60px;
+  margin-top: auto;
+  color:peachpuff;
+}
+
+#registery {
+    color: #fff;
+    font-size: x-small; 
+}
+
+#rest_bg {
+    background-image: url("lily-banse--YHSwy6uqvk-unsplash.jpg");
+    background-size: cover;
+    
+}
+
+#html {
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    opacity: 0.7;
+    }
+main {
+    display: block;
+    padding-top: 100px
+}
+
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: peachpuff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  .user-box2 input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: peachpuff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 4px solid black;
+    outline: none;
+    background: transparent;
+    font-weight: bold;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .user-box2 input:focus ~ label,
+  .user-box2 input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: peachpuff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .login-box form #button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box #button:hover {
+    background: white;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white,
+                0 0 25px white,
+                0 0 50px white,
+                0 0 100px white;
+  }
+  
+  .login-box #button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box #button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, black);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box #button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, black);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box #button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, black);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box #button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, black);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+  
+
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+   
+
+    
+
+.contact-us {
+    background: #f8f4e5;
+    padding: 50px 100px;
+    border: 2px solid black;
+    box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+    width: 65%;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: auto;
+    
+      /* Vertical alignment */
+    
+}
+
+.input {
+    display: block;
+    width: 100%;
+    font-size: 14pt;
+    line-height: 28pt;
+    font-family: "Fjalla One";
+    margin-bottom: 28pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: black;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.input:focus {
+    border-bottom: 5px solid #ffa580;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: #ffa580;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px 1px #95a4ff, 3px 3px 1px 2px black;
+}
+.button:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+
+::selection {
+    background: #ffc8ff;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+    border-bottom: 5px solid #95a4ff;
+    -webkit-text-fill-color: #2A293E;
+    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+

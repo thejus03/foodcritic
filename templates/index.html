@@ -1,0 +1,39 @@
+{% extends "format.html" %}
+
+{% block title %}home{% endblock %}
+
+<style>
+    
+</style>
+{% block body %}
+        
+    <h1 class='h1'>Restaurant itinerary</h1>
+    
+
+    <form action="/add" method="GET">
+        <button  name ="add-restaurants" class="button-54">Add restaurant</button>
+    </form>
+    <p style="padding-top: 10px;">
+        <h3>{{ notice }}</h3>
+        {% for restaurant in user_restaurants %}
+           
+            <div class="module">
+                
+                <h2 style="text-align: center;">{{ restaurant["restaurant_name"] }} {{ restaurant["rating"]}}/5 stars </button></h2>
+                    <h4 style="text-align: center;"><i>{{ restaurant["cusine"] }}</i></h4>
+                    <p>{{ restaurant["description"] }}</p>
+                <form action="/delete", method="POST">
+                    <button type="submit">Delete</button>
+                    <input type="text" name='restaurant_name' value='{{ restaurant["restaurant_name"] }}' hidden>
+                </form>
+                
+            </div>
+        
+        {% endfor %}
+    </p>
+    
+
+        
+
+{% endblock %}
+

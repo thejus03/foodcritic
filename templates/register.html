@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html id = "html" lang="en">
+    <head>
+        <title>Uniplanner -register</title>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,500;1,900&display=swap" rel="stylesheet">
+        <meta name=“viewport” content=“width=device-width, initial-scale=1”>
+        <style>
+            
+        </style>
+    </head>
+    <body id="register_bg">
+        <div class="login-box">
+            <h1>Register</h1>
+            <p>{{ notice }}</p>
+            <form action="/register" method="POST">
+              <div class="user-box">
+                <input type="text" autocomplete="off" name="username" required="">
+                <label>Username</label>
+              </div>
+              <div class="user-box">
+                <input type="password" autocomplete="off" name="password" required="">
+                <label>Password</label>
+              </div>
+              <div class="user-box">
+                <input type="password" autocomplete="off" name="confirmation" required="">
+                <label>Confirm password</label>
+              </div>
+              <button id ="button" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                sign up
+            </button>
+            </form>
+
+    </body>
+
+
+</html>
