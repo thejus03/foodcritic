@@ -1,23 +1,34 @@
-# FOODCRITIC
-#### Video Demo: https://youtu.be/r_ThIDmzJlM
-#### Description:
-Hi! My name is Thejus and i am from Singapore. I have created a simple webapp called FOODCRITIC that users can use to
-keep track of the restaurants they have visited before.
+# FoodCritic
 
-When i run the flask program it goes to the "/" route that rediredts to "/login" route as login is required and thus opens the login page. This page is from the login.html file that i created that has all the specific to the 
-form that i created to login. Both username and password have been made required fields. When you click enter i use python to check if the username and password
-tallies with the table called users that i created in the SQL database file called uniplanner.db. Once verified, it redirects to the "/" route which is the home.
+FoodCritic is a simplistic web application designed to assist users in tracking and reviewing the restaurants they have visited. Built with Flask, this application provides an intuitive interface for logging in, adding restaurant reviews, and seeking or searching for restaurant information.
 
-Inside the homepage, there are several buttons on top respectively the "Home", "Ask", "Search" and "Log Off" button that using GET method to route to
-"/", "/ask", "search" and "/logoff" respectively. In the homepage there is also a "ADD RESTAURANT" button that routes to "/add" via GET. This opens
-add.html file that shows a form where user can review the restaurant. It has a few fields but the decription field is purposely left optional user may not 
-neccessarily have an explicit opinion about the restaurant. Once you click enter the information is passed back to "/add" via POST which inserts the info
-into another table i created called restaurants in uniplanner.db. 
+## Navigation Flow
 
-The "Ask" button, when clicked, routes to "/ask" via the GET route that opens up the ask.html file. I imported openai and generated a free api key(limited use)
-to create a python function called gpt_ask(question) in helpers.py. Using this i took the users input and sent it as a question to the function. It returned
-a list that i sent back to ask.html and used iteration via for loop to print the info.
+1. **Login Page**:
+    - On initiating the Flask application, users are redirected to the `/login` route showcasing a login page sourced from `login.html`.
+    - The login form mandates both username and password fields.
+    - Upon submission, a backend verification against the `users` table in `uniplanner.db` is performed to authenticate credentials.
+    - Successful authentication redirects users to the home page (`/` route).
 
-The "Search" button when clicked, routes to "/search" via the GET route that opens up the search.html file. User can input the name or cusine of the restaurant which is send back
-to "/search" route via POST. I use this information and use it in SQL to check if the name or cusines outputs anything. If yes then it is sent back to that search.html file
+2. **Home Page**:
+    - The home page furnishes several navigation buttons including "Home", "Ask", "Search", and "Log Off" which route to `/`, `/ask`, `/search`, and `/logoff` respectively via GET method.
+    - An "ADD RESTAURANT" button, routing to `/add` via GET, enables users to review a restaurant through a form presented in `add.html`.
+    - The form captures various restaurant details with an optional description field, and on submission, routes to `/add` via POST, saving the information to the `restaurants` table in `uniplanner.db`.
+
+3. **Ask Page**:
+    - Accessible via the "Ask" button, this page routes to `/ask` via GET and displays a form from `ask.html`.
+    - Utilizing an OpenAI API (with a generated free API key) a `gpt_ask(question)` function in `helpers.py` processes user queries.
+    - The function’s output is iteratively displayed on `ask.html`.
+
+4. **Search Page**:
+    - Triggered by the "Search" button, this page routes to `/search` via GET, presenting a form on `search.html` for users to input restaurant name or cuisine.
+    - The input is sent back to `/search` via POST, and an SQL query filters restaurants based on the given criteria, returning the results to `search.html`.
+
+## Technical Specifications
+
+- **Framework**: Flask
+- **Database**: SQLite (`uniplanner.db`)
+- **Template Files**: `login.html`, `add.html`, `ask.html`, `search.html`
+- **Additional Libraries**: OpenAI
+
 
