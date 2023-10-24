@@ -35,4 +35,25 @@ FoodCritic is a simplistic web application designed to assist users in tracking 
 - **Template Files**: `login.html`, `add.html`, `ask.html`, `search.html`
 - **Additional Libraries**: OpenAI
 
+## Installation and Running Webapp locally
+
+#### Prerequisites
+
+Ensure you have the following installed on your machine:
+- Python 3.x
+- pip (Python's package installer)
+
+#### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/thejus03/foodcritic.git
+   cd foodcritic
+2. **Run app**:
+   ```bash
+   flask run
+
+#### Stopping application
+To stop webapp press `CTRL` + `C`
+
 
