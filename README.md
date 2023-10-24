@@ -1,6 +1,6 @@
-# FoodCritic
+# Foodcritic
 
-FoodCritic is a simplistic web application designed to assist users in tracking and reviewing the restaurants they have visited. Built with Flask, this application provides an intuitive interface for logging in, adding restaurant reviews, and seeking or searching for restaurant information.
+Foodcritic is a simplistic web application designed to assist users in tracking and reviewing the restaurants they have visited. Built with Flask, this application provides an intuitive interface for logging in, adding restaurant reviews, and seeking or searching for restaurant information.
 
 ## Navigation Flow
 
@@ -40,7 +40,7 @@ FoodCritic is a simplistic web application designed to assist users in tracking 
 #### Prerequisites
 
 Ensure you have the following installed on your machine:
-- Python 3.x
+- Python 3
 - pip (Python's package installer)
 
 #### Installation
@@ -49,11 +49,16 @@ Ensure you have the following installed on your machine:
    ```bash
    git clone https://github.com/thejus03/foodcritic.git
    cd foodcritic
-2. **Run app**:
+   
+2. **Install required packages**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Run app**:
    ```bash
    flask run
 
 #### Stopping application
-To stop webapp press `CTRL` + `C`
+To stop webapp press `CTRL` + `C` in the terminal.
 
 
